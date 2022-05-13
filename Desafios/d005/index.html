@@ -27,12 +27,27 @@
     </section>
 
     <script>
-        function clicou() {
-            var num = Number(window.prompt('Digite uma distância em metros(m)'))
+        function clicou(){
+            var m = (window.prompt('Digite uma distância em metros(m):'))
+
+            var metro = parseFloat(m.replace(',', '.'))
+            
             var res = window.document.getElementById('resultado')
 
-            res.innerHTML=`${}`
-            
+            var km = (metro/1000).toFixed(3).replace('.',',')
+            var hec = (metro/100).toFixed(3).replace('.',',')
+            var dec = (metro/10).toFixed(3).replace('.',',')
+            var deci = (metro*10).toLocaleString('pt-BR')
+            var cen = (metro*100).toLocaleString('pt-BR')
+            var mil = (metro*1000).toLocaleString('pt-BR')
+
+            res.innerHTML = `<h2>A distância de ${metro.toLocaleString('pt-BR')} metros, corresponde a...</h2>`
+            res.innerHTML += `<p>${km} quilômetros (Km)</p>`
+            res.innerHTML += `<p>${hec} hectômetros (Hm)</p>`
+            res.innerHTML += `<p>${dec} decâmetros (Dam)</p>`
+            res.innerHTML += `<p>${deci} decímetros (dm)</p>`
+            res.innerHTML += `<p>${cen} centímetros (cm)</p>`
+            res.innerHTML += `<p>${mil} milímetros (mm)</p>`
         }
     </script>
 
