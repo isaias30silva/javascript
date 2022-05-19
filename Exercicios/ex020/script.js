@@ -5,7 +5,7 @@ function clicou() {
 
     var estacao 
     switch (mes.toUpperCase()) {
-            case'JANEIRO': case'FEVEIRO': case'MARÇO':
+            case'JANEIRO': case'FEVEREIRO': case'MARÇO':
             estacao = 'INVERNO'
             break
 
