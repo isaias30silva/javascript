@@ -1,0 +1,20 @@
+<html>
+    <script>
+
+        var primo = true;
+
+        function verificaNumeroPrimo(numero){
+            for(var i = 2; i < numero; i++){
+                if(numero % i === 0){
+                    primo = false;
+                    break;
+                } 
+            }
+            if (primo == true){
+                console.log(`${numero}: você digitou um número primo!`)
+            } else {
+                console.log(`O número ${numero} não é primo!`)
+            }
+        }
+    </script>
+</html>
